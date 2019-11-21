@@ -10,7 +10,7 @@ source:
   sha256: c4e30b227682374c23cddc7fdb9324a99694d907e79242a25a4deeedb393be46
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - make
     - autoconf
   host:
@@ -46,3 +47,4 @@ extra:
   recipe-maintainers:
     - wolfv
     - lesteve
+    - scopatz
