@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - make
     - autoconf
   host:
@@ -46,3 +47,4 @@ extra:
   recipe-maintainers:
     - wolfv
     - lesteve
+    - scopatz
