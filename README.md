@@ -5,11 +5,9 @@ Home: https://gnupg.org/software/gpgme/index.html
 
 Package license: GPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gpgme-feedstock/blob/master/LICENSE.txt)
 
 Summary: GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications.
-
-
 
 Current build status
 ====================
