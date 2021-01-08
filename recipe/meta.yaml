@@ -1,5 +1,5 @@
 {% set name = "gpgme" %}
-{% set version = "1.15.0" %}
+{% set version = "1.15.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gnupg.org/ftp/gcrypt/gpgme/gpgme-{{ version }}.tar.bz2
-  sha256: 0b472bc12c7d455906c8a539ec56da0a6480ef1c3a87aa5b74d7125df68d0e5b
+  sha256: eebc3c1b27f1c8979896ff361ba9bb4778b508b2496c2fc10e3775a40b1de1ad
 
 build:
   number: 0
