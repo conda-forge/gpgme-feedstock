@@ -39,9 +39,11 @@ test:
 
 about:
   home: https://gnupg.org/software/gpgme/index.html
-  license: GPL-2.0
-  license_family: GPL
-  license_file: COPYING
+  license: GPL-2.1-or-later AND LGPL-2.1-or-later AND MIT
+  license_file:
+    - COPYING
+    - COPYING.LESSER
+    - LICENSES
   summary: GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications.
 
 extra:
