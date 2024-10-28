@@ -3,7 +3,7 @@ About gpgme
 
 Home: https://gnupg.org/software/gpgme/index.html
 
-Package license: GPL-2.1-or-later AND LGPL-2.1-or-later AND MIT
+Package license: GPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gpgme-feedstock/blob/main/LICENSE.txt)
 
