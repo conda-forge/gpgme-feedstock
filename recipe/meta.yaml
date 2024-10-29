@@ -27,7 +27,7 @@ requirements:
     - libassuan >=2.4.2,<3
     - libgpg-error >=1.36
   run:
-    - libgpg-error >=1.24
+    - libgpg-error >=1.36
     - libassuan >=2.4.2
 
 test:
