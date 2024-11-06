@@ -10,7 +10,7 @@ source:
   sha256: 361d4eae47ce925dba0ea569af40e7b52c645c4ae2e65e5621bf1b6cdd8b0e9e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -22,11 +22,13 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - autoconf
+    - {{ stdlib("c") }}
+    - pkg-config
   host:
-    - libgpg-error >=1.24
-    - libassuan >=2.4.2
+    - libassuan >=2.4.2,<3
+    - libgpg-error >=1.36
   run:
-    - libgpg-error >=1.24
+    - libgpg-error >=1.36
     - libassuan >=2.4.2
 
 test:
@@ -39,7 +41,7 @@ test:
 
 about:
   home: https://gnupg.org/software/gpgme/index.html
-  license: GPL-2.1-or-later AND LGPL-2.1-or-later AND MIT
+  license: GPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
   license_file:
     - COPYING
     - COPYING.LESSER
