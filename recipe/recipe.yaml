@@ -41,8 +41,8 @@ tests:
         - gpgme
       include:
         - gpgme.h
-      bin:
-        - gpgme-config
+      files:
+        - lib/pkgconfig/gpgme.pc
   - script:
       - gpgme-tool --help
 
