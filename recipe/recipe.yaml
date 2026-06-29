@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  name: gpgme
+  version: "1.24.3"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://gnupg.org/ftp/gcrypt/gpgme/gpgme-${{ version }}.tar.bz2
+  sha256: bfc17f5bd1b178c8649fdd918956d277080f33df006a2dc40acdecdce68c50dd
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  run_exports:
+    - ${{ pin_subpackage(name, upper_bound='x.x') }}
+  build:
+    - if: unix
+      then:
+        - gnuconfig
+    - ${{ compiler('c') }}
+    - ${{ compiler('cxx') }}
+    - make
+    - autoconf
+  host:
+    - libgpg-error >=1.36
+    - libassuan >=2.4.2
+  run:
+    - libgpg-error >=1.36
+    - libassuan >=2.4.2
+
+tests:
+  - package_contents:
+      lib:
+        - gpgme
+      include:
+        - gpgme.h
+      bin:
+        - gpgme-config
+  - script:
+      - gpgme-tool --help
+
+about:
+  homepage: https://gnupg.org/software/gpgme/index.html
+  license: GPL-2.0-or-later AND LGPL-2.1-or-later AND MIT
+  license_file:
+    - COPYING
+    - COPYING.LESSER
+    - LICENSES
+  summary: GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications.
+
+extra:
+  recipe-maintainers:
+    - wolfv
+    - lesteve
+    - scopatz
