@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: gpgme
-  version: "2.2.0"
+  version: "2.3.1"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://gnupg.org/ftp/gcrypt/gpgme/gpgme-${{ version }}.tar.bz2
-  sha256: 7160e80e84dafd00d956c84891c533bb7ab16a6a54fbe1574b2f3acf0496977b
+  sha256: 2bf94e0e677e5a8fc31f79dd323f91c5416b36fb851058bc1e8bce39f2642434
 
 build:
   number: 0
